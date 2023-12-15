@@ -6,62 +6,62 @@
     "subMenu": [
       {
         "link": "/taskManagement",
-        "subMenuId": "1",
+        "id": "1",
         "title": "Task List"
       },
       {
         "link": "/notificationCenter",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Notification Center"
       },
       {
         "link": "/pouchPreparation",
-        "subMenuId": "3",
+        "id": "3",
         "title": "Pouch Preparation"
       },
       {
         "link": "/RecordKnownVariance",
-        "subMenuId": "4",
+        "id": "4",
         "title": "Record a known Variance"
       },
       {
         "link": "/weeklyBalance",
-        "subMenuId": "5",
+        "id": "5",
         "title": "Weekly Balance"
       },
       {
         "link": "/branchDecrepencyAccount",
-        "subMenuId": "6",
+        "id": "6",
         "title": "Branch Decrepency Account"
       },
       {
         "link": "/weeklyMonthlyBalanceHistory",
-        "subMenuId": "7",
+        "id": "7",
         "title": "Weekly/Monthly Balance History"
       },
       {
         "link": "/pouchPreparationHistory",
-        "subMenuId": "8",
+        "id": "8",
         "title": "Pouch History"
       },
       {
         "link": "/salesSummary",
-        "subMenuId": "9",
+        "id": "9",
         "title": "Sales Summary"
       },
       {
         "link": "/TransactionLog",
-        "subMenuId": "10",
+        "id": "10",
         "title": "Transaction Log"
       },
       {
         "link": "/eventLog",
-        "subMenuId": "11",
+        "id": "11",
         "title": "Event Log"
       },
       {
         "link": "/manageCashDrawer",
-        "subMenuId": "12",
+        "id": "12",
         "title": "Manage Cash Drawer"
       }
     ],
@@ -74,27 +74,27 @@
     "subMenu": [
       {
         "link": "/cashManagementOverview",
-        "subMenuId": "1",
+        "id": "1",
         "title": "Cash Management Overview"
       },
       {
         "link": "/cashManagementHistory",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Cash Management History"
       },
       {
         "link": "/cashCountHistory",
-        "subMenuId": "3",
+        "id": "3",
         "title": "Cash Count History"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=coin_order",
-        "subMenuId": "4",
+        "id": "4",
         "title": "Notes and Coin Ordering"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=planned_order_landing_page",
-        "subMenuId": "5",
+        "id": "5",
         "title": "Planned Ordering"
       }
     ],
@@ -107,32 +107,32 @@
     "subMenu": [
       {
         "link": "/stocksManagementOverview",
-        "subMenuId": "1",
+        "id": "1",
         "title": "Stocks Management Overview"
       },
       {
         "link": "/stockCheck",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Stock Check"
       },
       {
         "link": "/manualBookInStock",
-        "subMenuId": "3",
+        "id": "3",
         "title": "Book in Stock"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=stock_ordering_landing_page",
-        "subMenuId": "4",
+        "id": "4",
         "title": "Stock Ordering"
       },
       {
         "link": "/stockMovementHistory",
-        "subMenuId": "5",
+        "id": "5",
         "title": "Stock Movement History"
       },
       {
         "link": "/stockCountHistory",
-        "subMenuId": "6",
+        "id": "6",
         "title": "Stock Count History"
       }
     ],
@@ -145,27 +145,27 @@
     "subMenu": [
       {
         "link": "/forexManagementOverview",
-        "subMenuId": "1",
+        "id": "1",
         "title": "Forex Management Overview"
       },
       {
         "link": "/forexMovementHistory",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Forex Movement History"
       },
       {
         "link": "/forexCountHistory",
-        "subMenuId": "3",
+        "id": "3",
         "title": "Forex Count History"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=forex_ordering",
-        "subMenuId": "4",
+        "id": "4",
         "title": "Forex Ordering"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=rate_board_configuration",
-        "subMenuId": "5",
+        "id": "5",
         "title": "Rate Board Configuration"
       }
     ],
@@ -178,12 +178,12 @@
     "subMenu": [
       {
         "link": "https://postofficetest.service-now.com/bh?id=sc_category",
-        "subMenuId": "1",
+        "id": "1",
         "title": "IT Issues"
       },
       {
         "link": "https://postofficetest.service-now.com/bh?id=postmaster_service_improvement",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Feedback and Support"
       }
     ],
@@ -196,12 +196,12 @@
     "subMenu": [
       {
         "link": "https://postofficetest.service-now.com/bh?id=sc_cat_item&sys_id=97388939db330010b976671cd3961970",
-        "subMenuId": "1",
+        "id": "1",
         "title": "Opening and Closing Times"
       },
       {
         "link": "Equipment link",
-        "subMenuId": "2",
+        "id": "2",
         "title": "Equipment Ordering"
       }
     ],
