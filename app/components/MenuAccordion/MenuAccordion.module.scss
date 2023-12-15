@@ -1,0 +1,78 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+$primary-grey: #d4d6e0;
+$white: #fff;
+$black: #000;
+$violet: #2e1a47;
+$grey-text-color: #222;
+$light-grey-text-color: #444;
+$ui-danger-red: #b20101;
+$variance-red: #ff0000;
+$variance-green: #00ff00;
+$ui-positive-green: #008000;
+$ui-warning-orange: #ff9500;
+$ui-warning-blue: #2b60de;
+$ui-warning-red: #dc381f;
+$primary-blue: #293462;
+$pale-pink: #f7ced7;
+
+.accordion {
+  top: 0;
+  left: 0;
+  background-color: $white;
+  font-weight: bold;
+  z-index: 9;
+  border: none;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.customAccordion {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  position: relative;
+}
+
+.summary {
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 18px;
+  border: none;
+  margin: 0;
+}
+
+.icon {
+  padding: 3px;
+}
+
+.details {
+  padding: 10px;
+  background-color: $white;
+  overflow: hidden;
+  transition: height ease 0.2s;
+  padding: 9px 10px 20px 15px;
+}
+
+.menuList {
+  list-style-type: none;
+  border-left: 1px solid $black;
+  padding-left: 10px;
+}
+
+.menuItem,
+.menuLink {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.menuLink {
+  padding: 14px;
+}

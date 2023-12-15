@@ -1,0 +1,110 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+$primary-grey: #d4d6e0;
+$white: #fff;
+$black: #000;
+$violet: #2e1a47;
+$grey-text-color: #222;
+$light-grey-text-color: #444;
+$ui-danger-red: #b20101;
+$variance-red: #ff0000;
+$variance-green: #00ff00;
+$ui-positive-green: #008000;
+$ui-warning-orange: #ff9500;
+$ui-warning-blue: #2b60de;
+$ui-warning-red: #dc381f;
+$primary-blue: #293462;
+$pale-pink: #f7ced7;
+
+.accordion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0px 10px;
+  background-color: $primary-blue;
+  color: $white;
+  font-weight: bold;
+  z-index: 9;
+  border: none;
+  margin: 0;
+  overflow-y: auto;
+}
+.customAccordion {
+  border: none;
+  margin: 0;
+  padding: none;
+  box-shadow: none;
+  background-color: $primary-blue;
+  position: relative;
+}
+
+.customAccordion::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.summary {
+  min-width: max-content;
+  margin: 0;
+  background-color: $primary-blue;
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+  width: 100%;
+  padding: 14px 8px;
+  cursor: pointer;
+  line-height: 18px;
+  border: none;
+}
+
+.icon {
+  color: $white;
+  margin: 3px 10px 0 0;
+}
+
+.title {
+  color: $white;
+  font-weight: bold;
+}
+
+.details {
+  padding: 10px;
+  background-color: $primary-blue;
+  overflow: hidden;
+  transition: height ease 0.2s;
+  padding: 9px 10px 20px 15px;
+}
+
+.menuList {
+  list-style-type: none;
+  border-left: 1px solid #d0d3d4;
+  padding-left: 10px;
+}
+
+.menuItem {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.menuLink {
+  color: $white;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 14px;
+  line-height: 18px;
+}
