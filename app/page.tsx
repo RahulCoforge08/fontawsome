@@ -1,6 +1,4 @@
 'use client'
-import { DynamicIcon } from './utils/iconHelper';
-
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import MenuAccordion from './components/MenuAccordion';
 import styles from './SideMenu.module.scss';
@@ -13,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>Hi Rahul....</div>
-      <MenuAccordion data={menuListData} className={styles} showIcons={true} />
+      <MenuAccordion data={menuListData} showIcons={true} />
     </main>
   );
 }

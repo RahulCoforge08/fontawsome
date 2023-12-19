@@ -20,8 +20,12 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.js"],
   "exclude": ["node_modules"]
 }

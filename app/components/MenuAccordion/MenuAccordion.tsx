@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { DynamicIcon } from './../../utils/iconHelper';
+import { DynamicIcon } from '../../utils/iconHelper';
 import {
   Accordion as MuiAccordion,
   AccordionDetails,
@@ -9,17 +8,18 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import classNames from 'classnames';
+import SubMenu from './SubMenu';
 import defaultStyles from './MenuAccordion.module.scss';
 
-const DEFAULT_ICON_SIZE = 24;
+const DEFAULT_ICON_SIZE = 22;
 
-interface SubMenuItem {
+export interface SubMenuItem {
   id: string;
   link: string;
   title: string;
 }
 
-interface AccordionItem {
+export interface AccordionItem {
   id: string;
   icon: string;
   link: string;
@@ -49,14 +49,6 @@ const MenuAccordion = ({ data, className, showIcons = false, defaultId }: Accord
     setExpandedPanelId(isExpanded ? panel : null);
   };
 
-  const renderSubMenu = (subMenu: SubMenuItem) => (
-    <li className={classNames(defaultStyles.menuItem)} key={subMenu.id}>
-      <Link href={subMenu.link} target="_blank" rel="noopener noreferrer">
-        {subMenu.title}
-      </Link>
-    </li>
-  );
-
   const renderAccordionItem = (item: AccordionItem) => (
     <MuiAccordion
       key={item.id}
@@ -78,7 +70,11 @@ const MenuAccordion = ({ data, className, showIcons = false, defaultId }: Accord
       </AccordionSummary>
 
       <AccordionDetails className={classNames(defaultStyles.details)}>
-        <ul className={classNames(defaultStyles.menuList)}>{item.subMenu?.map(renderSubMenu)}</ul>
+        <ul className={classNames(defaultStyles.menuList)}>
+          {item.subMenu?.map((subMenu) => (
+            <SubMenu key={subMenu.id} subMenu={subMenu} styles={defaultStyles} />
+          ))}
+        </ul>
       </AccordionDetails>
     </MuiAccordion>
   );

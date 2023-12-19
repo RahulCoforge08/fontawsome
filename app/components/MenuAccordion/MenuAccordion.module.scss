@@ -18,6 +18,18 @@ $ui-warning-red: #dc381f;
 $primary-blue: #293462;
 $pale-pink: #f7ced7;
 
+%before {
+  ::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    right: 0;
+    height: 1px;
+    content: '';
+    background-color: #fff;
+  }
+}
+
 .accordion {
   top: 0;
   left: 0;
@@ -25,43 +37,55 @@ $pale-pink: #f7ced7;
   font-weight: bold;
   z-index: 9;
   border: none;
-  margin: 0;
   overflow-y: auto;
 }
 
 .customAccordion {
-  border: none;
-  margin: 0;
-  padding: 0;
   box-shadow: none;
-  position: relative;
+  margin: 0;
+
+  & > * {
+    margin: 0;
+  }
 }
 
 .summary {
-  font-size: 18px;
-  text-align: left;
-  font-weight: 700;
-  cursor: pointer;
-  line-height: 18px;
-  border: none;
   margin: 0;
+  @extend %before;
+
+  & > * {
+    margin: 0 !important;
+  }
+
+  &:hover {
+    background-color: $primary-grey;
+    cursor: pointer;
+  }
 }
 
 .icon {
-  padding: 3px;
+  margin: auto 0;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 700;
+  width: 100%;
+  padding: 14px 8px;
+  cursor: pointer;
+  border: none;
 }
 
 .details {
-  padding: 10px;
   background-color: $white;
   overflow: hidden;
   transition: height ease 0.2s;
-  padding: 9px 10px 20px 15px;
+  padding: 0 20px 8px 22px;
 }
 
 .menuList {
   list-style-type: none;
-  border-left: 1px solid $black;
+  border-left: 1px solid $light-grey-text-color;
   padding-left: 10px;
 }
 
@@ -71,8 +95,12 @@ $pale-pink: #f7ced7;
   font-size: 15px;
   line-height: 18px;
   text-decoration: none;
-}
-
-.menuLink {
   padding: 14px;
+  color: $light-grey-text-color;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-grey;
+    cursor: pointer;
+  }
 }
