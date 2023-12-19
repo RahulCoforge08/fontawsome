@@ -1,7 +1,7 @@
-'use client'
+'use client';
+
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import MenuAccordion from './components/MenuAccordion';
-import styles from './SideMenu.module.scss';
 
 import MenuListMockData from './MenuListMockData.json';
 
