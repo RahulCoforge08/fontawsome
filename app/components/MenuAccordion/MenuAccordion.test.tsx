@@ -49,7 +49,7 @@ describe('MenuAccordion', () => {
     expect(submenuItem1).toBeInTheDocument();
     expect(submenuItem2).toBeInTheDocument();
   });
-
+  
   test('expands and collapses accordion panels on header click', async () => {
     render(<MenuAccordion data={mockAccordionData} />);
     const accordionItems = screen.getAllByRole('button', { name: /Accordion \d/i });
@@ -72,4 +72,15 @@ describe('MenuAccordion', () => {
       expect(accordionItems[1]).toHaveAttribute('aria-expanded', 'true');
     });
   });
+
+  test('should show and hide icons based on showIcons prop', () => {
+    render(<MenuAccordion data={mockAccordionData} showIcons={true} />);
+    let icons = screen.queryAllByTestId('dynamic-icon');
+    expect(icons).toHaveLength(1);
+  
+    render(<MenuAccordion data={mockAccordionData} showIcons={false} />, {container: document.body});
+    icons = screen.queryAllByTestId('dynamic-icon');
+    expect(icons).toHaveLength(0);
+  });
+  
 });

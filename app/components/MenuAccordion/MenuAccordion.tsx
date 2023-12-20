@@ -64,6 +64,7 @@ const MenuAccordion = ({ data, className, showIcons = false, defaultId }: Accord
             className={classNames(defaultStyles.icon)}
             size={item.iconSize ?? DEFAULT_ICON_SIZE}
             iconName={item.icon}
+            data-testid="dynamic-icon"
           />
         )}
         <Typography className={classNames(defaultStyles.title)}>{item.title}</Typography>
