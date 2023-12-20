@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { DynamicIcon } from '../../utils/iconHelper';
 import {
   Accordion as MuiAccordion,
@@ -36,18 +36,15 @@ export interface AccordionProps {
 }
 
 const MenuAccordion = ({ data, className, showIcons = false, defaultId }: AccordionProps) => {
-  const [expandedPanelId, setExpandedPanelId] = useState<string | null>(null);
+  const [expandedPanelId, setExpandedPanelId] = useState<string | null>(defaultId || (data.length > 0 ? data[0].id : null));
 
   useEffect(() => {
-    if (!defaultId && data.length > 0) {
-      setExpandedPanelId(data[0].id);
-    }
+    setExpandedPanelId(defaultId || (data.length > 0 ? data[0].id : null));
   }, [data, defaultId]);
 
-  const handleChange = (panel: string) => (isExpanded: boolean) => {
-    if (expandedPanelId === panel) return;
-    setExpandedPanelId(isExpanded ? panel : null);
-  };
+  const handleChange = useCallback((panel: string) => (isExpanded: boolean) => {
+    setExpandedPanelId(isExpanded && expandedPanelId !== panel ? panel : null);
+  }, [expandedPanelId]);
 
   const renderAccordionItem = (item: AccordionItem) => (
     <MuiAccordion
@@ -69,10 +66,9 @@ const MenuAccordion = ({ data, className, showIcons = false, defaultId }: Accord
         )}
         <Typography className={classNames(defaultStyles.title)}>{item.title}</Typography>
       </AccordionSummary>
-
       <AccordionDetails className={classNames(defaultStyles.details)}>
         <ul className={classNames(defaultStyles.menuList)}>
-          {item.subMenu?.map((subMenu) => (
+          {item.subMenu?.map(subMenu => (
             <SubMenu key={subMenu.id} subMenu={subMenu} styles={defaultStyles} />
           ))}
         </ul>
